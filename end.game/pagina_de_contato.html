@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>PixelStorm_contatos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        padding: 0;
+    }
+
+    nav {
+        background-color: #333;
+        padding: 10px 0;
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        /* Centraliza os itens do menu */
+    }
+
+    nav ul li {
+        margin: 0 20px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #ffffff;
+        padding: 5px 10px;
+        transition: background-color 0.3s;
+    }
+
+    nav ul li a:hover {
+        background-color: #555;
+        border-radius: 5px;
+    }
+     .content {
+                display: flex;
+                flex-direction: column;
+                /* Organiza verticalmente */
+                align-items: center;
+                /* Centraliza horizontalmente */
+                justify-content: center;
+                /* Centraliza verticalmente */
+                height: 100vh;
+                /* Ocupa a altura da tela */
+                text-align: center;
+                margin-top: 60px;
+                /* Compensa o espaço do menu */
+                background-color: white;
+            }
+
+            .content img {
+                max-width: 400px;
+                /* Tamanho máximo da imagem */
+                height: auto;
+                /* Mantém as proporções */
+                margin-bottom: 20px;
+                /* Espaço entre imagem e texto */
+            }
+            h1, p {
+              text-align: center;
+            }
+
+          .links {
+            text-align: center;
+          }
+          .formulario {
+            text-align: center;
+          }
+          
+</style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="incicio_site.html">Início</a></li>
+            <li><a href="sobre_o_site.html2.html">Sobre</a></li>
+            <li><a href="https://localhost/loja/index2.php">Produtos</a></li>
+            <li><a href="pagina_de_novidades.html">Novidades</a></li>
+            <li><a href="pagina_de_contato.html">Contatos</a></li>
+        </ul>
+    </nav>
+    <div class="links">
+    <h1>&#128222;Contatos&#128222;</h1>
+    <a href="https://www.instagram.com/pixelstormoficial/">&#64;pixelstormficial</href></a>
+    <p>&#9993;pixelstormoficial@gmail.com</p>
+    <p>&#128241;(21) 99439-7995</p>
+    </div>
+    <form id="meuFormulario">
+    <form action="processar.php" method="post">
+  <div class="formulario">
+      <h2>Se tiver interesse, vem ser mais um pixel dessa tempestade!!</h2>
+  <label for="nome">Nome:</label><br>
+  <input type="text" id="nome" name="nome" required><br><br>
+
+  <label for="email">E-mail:</label><br>
+  <input type="email" id="email" name="email" required><br><br>
+
+  <label for="mensagem">Mensagem:</label><br>
+  <textarea id="mensagem" name="mensagem" rows="4" required></textarea><br><br>
+
+  <button type="submit">Enviar</button>
+</form>
+</form>
+</div>
+<script>
+  const formulario = document.getElementById("meuFormulario");
+  
+ document.getElementById("meuFormulario").addEventListener("submit", function(event) {
+    event.preventDefault(); // Impede o envio tradicional do formulário
+
+
+    // Aqui você pode fazer algo com os dados, como enviar via AJAX ou só exibir uma mensagem:
+    alert("Mensagem enviada com sucesso (sem recarregar a página)!");
+    
+    // Opcional: limpar os campos
+    event.target.reset();
+  });
+</script>
+</body>
+</html>
