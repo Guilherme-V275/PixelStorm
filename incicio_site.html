@@ -1,0 +1,209 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    body {
+        margin: 0;
+       font-family: 'Manrope', sans-serif;
+        padding: 0;
+    }
+
+    nav {
+        background-color: #333;
+        padding: 10px 0;
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        /* Centraliza os itens do menu */
+    }
+
+    nav ul li {
+        margin: 0 20px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #ffffff;
+        padding: 5px 10px;
+        transition: background-color 0.3s;
+    }
+
+    nav ul li a:hover {
+        background-color: #555;
+        border-radius: 5px;
+    }
+     .content {
+                display: flex;
+                flex-direction: column;
+                /* Organiza verticalmente */
+                align-items: center;
+                /* Centraliza horizontalmente */
+                justify-content: center;
+                /* Centraliza verticalmente */
+                height: 100vh;
+                /* Ocupa a altura da tela */
+                text-align: center;
+                margin-top: 60px;
+                /* Compensa o espaço do menu */
+                background-color: white;
+            }
+
+            .content img {
+                max-width: 200px;
+                max-height: 300px;
+                /* Tamanho máximo da imagem */
+                height: auto;
+                /* Mantém as proporções */
+                margin-bottom: 20px;
+                /* Espaço entre imagem e texto */
+            }
+            h1, p {
+                 font-family: 'Manrope', sans-serif;
+            }
+</style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="incicio_site.html">Início</a></li>
+            <li><a href="informações_detalhadas.html">Sobre</a></li>
+            <li><a href="teste1.html">Produtos</a></li>
+            <li><a href="pagina_de_novidades.html">Novidades</a></li>
+            <li><a href="pagina_de_contato.html">Contatos</a></li>
+        </ul>
+        <div class="content">
+           
+            <img src="logo_pixel.jpeg" alt="Logo PixelStorm">
+            <h1>Bem-vindo à PixelStorm Games & Tech</h1>
+            <p>Somos uma empresa de desenvolvimento de games e produtos inovadores.</p>
+            <p>Conheça nosso mais novo lançamento: o PeraPhone, o smartphone que revoluciona o jeito de se conectar!</p>
+        </div>
+    </nav>
+    
+    <!DOCTYPE html>
+    <html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PixelStorm_início</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+
+            nav {
+                background-color: #333;
+                padding: 10px 0;
+                position: fixed;
+                top: 0;
+                width: 100%;
+                z-index: 1000;
+            }
+
+            nav ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+            }
+
+            nav ul li {
+                margin: 0 15px;
+            }
+
+            nav ul li a {
+                text-decoration: none;
+                color: #ffffff;
+                font-weight: bold;
+                padding: 5px 10px;
+                transition: background-color 0.3s;
+            }
+            nav ul li a .hover {
+                background-color: #555;
+                border-radius  : 5px;
+            }
+
+            /* Centraliza imagem e texto */
+            .content {
+                display: flex;
+                flex-direction: column;
+                /* Organiza verticalmente */
+                align-items: center;
+                /* Centraliza horizontalmente */
+                justify-content: center;
+                /* Centraliza verticalmente */
+                height: 100vh;
+                /* Ocupa a altura da tela */
+                text-align: center;
+                margin-top: 10px;
+                /* Compensa o espaço do menu */
+            }
+
+            .content img {
+                max-width: 400px;
+                /* Tamanho máximo da imagem */
+                height: auto;
+                /* Mantém as proporções */
+                margin-bottom: 20px;
+                /* Espaço entre imagem e texto */
+            }
+            @keyframes cair {
+    to {
+      transform: translateY(100vh);
+      opacity: 0;
+    }
+  }
+  
+        </style>
+    </head>
+
+    <body>
+        <nav>
+            <ul>
+                <li><a href="incicio_site.html">Início</a></li>
+                <li><a href="sobre_o_site.html2.html">Sobre</a></li>
+                <li><a href="https://localhost/loja/index2.php">Produtos</a></li>
+                <li><a href="pagina_de_novidades.html">Novidades</a></li>
+                <li><a href="pagina_de_contato.html">Contatos</a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <img src="pixelstorm.jpg" alt="Descrição da imagem">
+            <h1>Bem-vindo à PixelStorm Games & Tech</h1>
+            <p>Somos uma empresa de desenvolvimento de games e produtos inovadores.</p>
+            <p>Conheça nosso mais novo lançamento: o Peraphone, o smartphone que revoluciona o jeito de se conectar!</p>
+        </div>
+        <button onclick="criarPera()">🍐 Soltar uma pera</button>
+
+       <script>
+  function criarPera() {
+    const pera = document.createElement("div");
+    pera.textContent = "🍐";
+    pera.style.position = "fixed";
+    pera.style.left = Math.random() * 100 + "vw";
+    pera.style.top = "-40px";
+    pera.style.fontSize = Math.random() * 30 + 20 + "px";
+    pera.style.animation = "cair 5s linear forwards";
+    document.body.appendChild(pera);
+    setTimeout(() => pera.remove(), 5000);
+  }
+</script>
+
+    </body>
+
+    </html>
